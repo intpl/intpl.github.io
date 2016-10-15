@@ -1,0 +1,23 @@
+{% include head.html %}
+
+<body>
+  <div id="particles-js"></div>
+  <div id="background-image"></div>
+  <div class="wrapper">
+    <div class="content">
+      <div class="container container-center">
+        <div class="row">
+  {% include header.html %}
+          <div class="well container">
+            <div class="col-md-12">
+              <article>
+                {{ content }}
+                {% include copy.html %}
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </div>

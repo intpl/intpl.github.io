@@ -1,0 +1,119 @@
+{
+  "skills":
+  [  {
+    "name": "web development",
+    "desc": "I believe this is my best set of skills. I feel pretty confident as a Fullstack Developer.",
+    "skillset": [
+      {
+        "name": "Ruby on Rails / Ruby",
+        "percentage": 90,
+        "desc": "This technology is a charm. And Ruby language? Amazing. I feel really seduced by the way these things work. I went to a Ruby on Rails course in July-August 2014 (2 months high-speed knowledge feeder) and I'm learning ever since in both professional work and in my free time. I'd love to have an environment in which I could grow as a Ruby developer and a computer programmer in general. I have advanced Ruby/Rails skills, therefore I can easily consider myself a middle developer (or even better than that)."
+      },
+      {
+        "name": "HTML5 / CSS3",
+        "percentage": 85,
+        "desc": "I started to learn web development in early Primary School's classes. Back then, I went to be guided by a tremendous teacher to the Palace of Culture in Warsaw. That was many years ago (15 years ago or something like that). Ever since then I've been using these languages almost on a daily basis. Besides the latest version of HTML, I know xHTML, XML, earlier HTMLs and a bit of HAML/SLIM.  I also know SCSS, SASS and LESS well, and of course CSS with latest features. Bootstrap/Zurb Foundation? Not a problem (see this site). :)"
+      },
+      {
+        "name": "JavaScript / ES6",
+        "percentage": 85,
+        "desc": "I understand prototypes and know what a closure is. I promise you. Also, jQuery."
+      },
+      {
+        "name": "React.js / Redux",
+        "percentage": 85,
+        "desc": "React+Redux is a beauty. I mean, bringing Virtual DOM and functional programming to JavaScript was a great idea and debugging it with Redux DevTools is easy and pleasant. I really like to work with it."
+      },
+      {
+        "name": "Vue.js / Vuex",
+        "percentage": 60,
+        "desc": "...but if you think that React.js is the coolest kid on the block nowadays, you better think again. :)"
+      },
+      {
+        "name": "Elixir / Phoenix",
+        "percentage": 70,
+        "desc": "I'm starting to fall in love with this stuff. It amazes me by how it uses the Erlang VM in a style that totally reminds me of Ruby while respecting functional paradigm (which is awesome btw)."
+      },
+      {
+        "name": "PHP",
+        "percentage": 50,
+        "desc": "I worked as a PHP Developer for 4 months. Please, don't make me write anything in this language ever again, hah."
+      },
+      {
+        "name": "SQL",
+        "percentage": 60,
+        "desc": "I have got a solid understanding. I was using PostgreSQL the most, but also MySQL and SQLite."
+      }
+    ]
+  },
+  {
+    "name": "linux",
+    "desc": "Okay, let me get this straight. I installed a Linux for the first time when I was 9 years old. It was Fedora Core 3. Since that day I use Linux on a daily basis on every machine (I even made my parents use it). I'm a fanboy, geek, nerd. Call this whatever you want. I don't use Windows at all.",
+    "skillset": [
+      {
+        "name": "Production Server-side",
+        "percentage": 70,
+        "desc": "I can hook up Nginx with Rails/Node.js using Passenger. Or Apache with PHP. Want to deploy using Capistrano? No problem. I'm your man for this stuff. I worked as a server administrator for a while."
+      },
+      {
+        "name": "Server-side security",
+        "percentage": 70,
+        "desc": "Iptables, Fail2ban, daily updates, stable environment and well-thought out configurations. I really try to take care of every element of the puzzle here."
+      },
+      {
+        "name": "Git",
+        "percentage": 90,
+        "desc": "I've been working with Git during my entire journey as a software developer. I feel really fluent in this version control environment. I don't use any front-end applications to it (just plain CLI)."
+      },
+      {
+        "name": "Geeky text editors",
+        "percentage": 100,
+        "desc": "I use Vim and Emacs simultaneously. Deal with it. :)"
+      }
+    ]
+  },
+  {
+    "name": "security / networking",
+    "desc": "can you hear the ghost's heartbleed?",
+    "skillset": [
+      {
+        "name": "Web exploitation",
+        "percentage": 70,
+        "desc": "XSS, SQLi, CSRF, etc. I know enough to spot a vulnerability and secure it."
+      },
+      {
+        "name": "Protocols",
+        "percentage": 60,
+        "desc": "TCP/IP, HTTP(s), SSL/TLS, etc."
+      },
+      {
+        "name": "Various scanning methods",
+        "percentage": 30,
+        "desc": "Nmap, w3af, and many more tools to scan for vulnerabilities."
+      },
+      {
+        "name": "Exploitation",
+        "percentage": 10,
+        "desc": "Due to legal issues I never tried to learn to use these kinds of software. I know a little bit of Metasploit from tutorials."
+      }
+    ]
+  },
+
+  {
+    "name": "languages",
+    "desc": "Human way of interpreting statements",
+    "skillset": [
+      {
+        "name": "Polish",
+        "percentage": 100,
+        "desc": "Native."
+      },
+      {
+        "name": "English",
+        "percentage": 80,
+        "desc": "Awesome at reading, very good at writing, good at speaking. Fluent in general."
+      }
+    ]
+  }
+  ]
+}
