@@ -26,7 +26,8 @@
                 <div class="post-content">
                   <div id="copy" class="toc"></div>
                   <h2>Table of contents</h2>
-                  {{ content | toc }}
+                  {% include toc.html html=content %}
+                  {{ content }}
                   {% include copy.html %}
                 </div>
                 {% if page.comments %}
