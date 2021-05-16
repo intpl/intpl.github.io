@@ -24,8 +24,9 @@
                   </ul>
                 </div>
                 <div class="post-content">
-                  <div id="toc" class="toc"></div>
-                  {{ content }}
+                  <div id="copy" class="toc"></div>
+                  <h2>Table of contents</h2>
+                  {{ content | toc }}
                   {% include copy.html %}
                 </div>
                 {% if page.comments %}

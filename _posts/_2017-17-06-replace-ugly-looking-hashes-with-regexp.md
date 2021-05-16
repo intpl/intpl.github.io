@@ -4,6 +4,7 @@ title: "Replace ugly looking symbol hashes with Regexp"
 date: 2017-06-17 14:00:00 +0200
 description: Simple oneliner to replace all old 1.8-looking hashes (:a => :b) with new notation.
 share: true
+toc: true
 ---
 
 We've all seen this:

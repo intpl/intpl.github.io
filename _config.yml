@@ -49,3 +49,4 @@ exclude: ['README.md', 'LICENSE', 'skillset_builder.rb', 'skillset.json']
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-toc
