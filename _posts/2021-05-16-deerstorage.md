@@ -146,7 +146,7 @@ I wanted DeerStorage to be easy to use and easy to set-up without compromising p
 2. Let's Encrypt certificate requested and connected
 3. NGNiX that keeps reloading and waiting for the certificate. Later on wrapping everything with the SSL
 4. Extremely easy to start and stop the entire application
-5. Easy to scale this up in the future. With little effort create new nodes for PostgreSQL, maybe later use Elixir's (hot code reloading)[https://blog.appsignal.com/2018/10/16/elixir-alchemy-hot-code-reloading-in-elixir.html], running across multiple Erlang nodes, etc.
+5. Easy to scale this up in the future. With little effort create new nodes for PostgreSQL, maybe later use Elixir's [hot code reloading](https://blog.appsignal.com/2018/10/16/elixir-alchemy-hot-code-reloading-in-elixir.html), running across multiple Erlang nodes, etc.
 
 ## Database inside of your database!
 I know, this may be a bad idea on paper, but I believe it's efficient for small-case scenarios (no more than 100k records per table).
