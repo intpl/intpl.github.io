@@ -9,7 +9,7 @@ toc: true
 
 [Source code](https://github.com/intpl/deer_storage) - Source code licensed under GNU/GPL v3
 [Demo instance](https://demo.deerstorage.com) - Demo instance to click through. May be removed by the time you read this.
-[Installation/introduction video (YouTube)](https://www.youtube.com/watch?v=O5EY-dpxRuE&t=504s) - Me walking you through installation and basic features of the DeerStorage
+[Installation/introduction video (YouTube)](https://www.youtube.com/watch?v=O5EY-dpxRuE) - Me walking you through installation and basic features of the DeerStorage
 
 In this blog post I will use the term "database". It does not, by any means, refer to the PostgreSQL database used underneath, which is used entirely for all DeerStorage "databases". "Database" is a specific term related to DeerStorage creation named "subscription" in the code. I will refer to PostgreSQL database as "PostgreSQL database" later on, when I dive into technical details.
 
