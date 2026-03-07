@@ -1,29 +1,34 @@
 ---
-layout: page
+layout: null
 ---
 
-{% for post in site.posts limit:10 %}
-  <div class="post-meta">
-  <div class="post-time">
-    <i class="fa fa-calendar"></i>
-    <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time>
-  </div>
-  <ul>
-    {% for tag in post.tags %}
-    <li><a href="{{site.baseurl | prepend:site.url}}/tag/{{ tag }}">{{ tag }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
-
-  <h2 class="post-title">
-    <a href="{{post.url | prepend:site.baseurl | prepend:site.url}}">
-      {{ post.title }}
-    </a>
-  </h2>
-
-  <div class="post-descr">
-    <p>
-      {{ post.description }}
-    </p>
-  </div>
-  {% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nothing here</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #555;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      color: #eee;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <p>There is nothing here except <a href="{{site.baseurl | prepend:site.url}}/blog">blog</a> (outdated)</p>
+</body>
+</html>
