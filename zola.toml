@@ -1,0 +1,14 @@
+base_url = "http://gladecki.pl"
+
+title = "gladecki.pl"
+
+compile_sass = true
+build_search_index = true
+
+[markdown]
+
+[markdown.highlighting]
+error_on_missing_language = true
+theme = "gruvbox-light-soft"
+
+[extra]

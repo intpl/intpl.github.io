@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ get_url(path="gruvbox.css") }}">
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="{{ get_url(path="/") }}">[home]</a>
+        <a href="{{ get_url(path="/personal") }}">[personal notes]</a>
+        <a href="{{ get_url(path="/technical") }}">[technical notes]</a>
+      </nav>
+      {% block content %}{% endblock content %}
+    </div>
+  </body>
+</html>

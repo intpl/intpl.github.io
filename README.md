@@ -1,4 +1,0 @@
-www.gladecki.pl
-============
-
-nananananana

@@ -1,0 +1,116 @@
+$bg: #f9f1e0;
+$bg1: #ede0c0;
+$fg: #3c3836;
+$fg1: #665c54;
+$red: #9d0006;
+$green: #79740e;
+$yellow: #b57614;
+$blue: #076678;
+$purple: #8f3f71;
+$aqua: #427b58;
+$orange: #af3a03;
+$font: "Georgia", "Charter", "Palatino Linotype", serif;
+$mono: "Iosevka", "Fira Code", "Consolas", "Courier New", monospace;
+$max-w: 38rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: $bg;
+  color: $fg;
+  font-family: $font;
+  line-height: 1.6;
+  padding: 1rem;
+}
+a {
+  color: $blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $purple;
+  }
+}
+h1, h2, h3 {
+  color: $fg;
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 700;
+}
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; }
+p, ul, ol {
+  margin: 0.5rem 0;
+}
+ul, ol {
+  padding-left: 1.2rem;
+}
+code {
+  background: $bg1;
+  padding: 0.15rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: $mono;
+}
+pre {
+  background: $bg1;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+  font-family: $mono;
+  code {
+    background: none;
+    padding: 0;
+    font-family: $mono;
+  }
+}
+blockquote {
+  border-left: 3px solid $yellow;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  color: $fg1;
+}
+hr {
+  border: none;
+  border-top: 1px solid $bg1;
+  margin: 1.5rem 0;
+}
+.container {
+  max-width: $max-w;
+  margin: 0 auto;
+}
+nav {
+  margin-bottom: 1.5rem;
+  a {
+    color: $aqua;
+    margin-right: 1rem;
+    font-weight: 700;
+    &:hover { color: $orange; }
+  }
+}
+.subtitle {
+  color: $fg1;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.post-list {
+  list-style: none;
+  padding: 0;
+  li {
+    margin: 0.4rem 0;
+    span {
+      color: $fg1;
+      font-size: 0.85rem;
+    }
+  }
+}
