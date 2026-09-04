@@ -1,6 +1,6 @@
 base_url = "https://gladecki.pl"
 
-title = "gladecki.pl"
+title = "Bartosz Gladecki"
 
 compile_sass = true
 build_search_index = true
@@ -9,6 +9,6 @@ build_search_index = true
 
 [markdown.highlighting]
 error_on_missing_language = true
-theme = "gruvbox-light-soft"
+theme = "gruvbox-dark-soft"
 
 [extra]

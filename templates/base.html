@@ -4,16 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <link rel="stylesheet" href="{{ get_url(path="gruvbox.css") }}">
+    <meta name="description" content="Bartosz Gładecki, senior full stack developer (Elixir/Phoenix, Ruby on Rails, React) with an active AI/ML specialization: LLM integration, RAG, vector and graph search, generative pipelines.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="/gruvbox.css">
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <a href="{{ get_url(path="/") }}">[home]</a>
-        <a href="{{ get_url(path="/personal") }}">[personal notes]</a>
-        <a href="{{ get_url(path="/technical") }}">[technical notes]</a>
-      </nav>
-      {% block content %}{% endblock content %}
+    <a class="skip-link" href="#content">skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Bartosz Gladecki home">gladecki.pl</a>
+        <nav aria-label="Primary">
+          <a href="/">home</a>
+          <a href="/skillset/">skillset</a>
+          <a href="/hire-me/">hire me!</a>
+          <a href="/technical/">technical notes</a>
+          <a href="/personal/">personal notes</a>
+          <a href="/contact/">contact</a>
+        </nav>
+      </header>
+      <main id="content">
+        {% block content %}{% endblock content %}
+      </main>
     </div>
   </body>
 </html>

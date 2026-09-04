@@ -3,13 +3,16 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
-<ul class="post-list">
+<header class="page-header">
+  <p class="section-kicker">archive</p>
+  <h1>{{ section.title }}</h1>
+</header>
+<ol class="post-list">
   {% for page in section.pages %}
   <li>
-    <span>{{ page.date }}</span>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    <time datetime="{{ page.date }}">{{ page.date }}</time>
+    <a href="{{ page.path | safe }}">{{ page.title }}</a>
   </li>
   {% endfor %}
-</ul>
+</ol>
 {% endblock content %}

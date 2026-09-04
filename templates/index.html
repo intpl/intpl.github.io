@@ -3,11 +3,107 @@
 {% block title %}{{ config.title }}{% endblock title %}
 
 {% block content %}
-<h1>{{ config.title }}</h1>
-<p>
-    A place where I share my notes - both personal and technical. (:
-</p>
-<p>Not a commercial project.</p>
-<p>Kept as minimal as possible on purpose.</p>
-<p>Made by a human for other humans. ❤️</p>
+<section class="hero" aria-labelledby="hero-title">
+  <h1 id="hero-title">Bartosz Gładecki</h1>
+  <p class="lede">
+    Senior full stack developer. Elixir/Phoenix, Ruby on Rails, React, and since mid-2025,
+    hands-on AI work: LLM integration, RAG pipelines, vector and graph search, generative media.
+    Fifteen years of commercial web development.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="beginning-title">
+  <p class="section-kicker">the beginning</p>
+  <h2 id="beginning-title">Linux at nine. Web ever since.</h2>
+  <p>
+    I installed Fedora Core 3 all by myself at the age of nine. That was the gateway, and I've
+    used Linux every single day since. It wasn't a tool I picked up along the way; it's the
+    foundation everything else was built on. Today I run Arch Linux and feel at home deep in the
+    system, from kernel configuration to network hardening.
+  </p>
+  <p>
+    Not long after that first install, I started learning HTML. Then CSS, then PHP, and the
+    story kept going. By late primary school I was already curious about web security, learning
+    common attack vectors and bug types in web applications. I even built my own webpage in
+    2005, at the age of twelve: <a href="https://web.archive.org/web/20050206134515/http://www.pm.waw.pl/~u33343/">it still exists in the archive</a>.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="drives-title">
+  <p class="section-kicker">what drives me</p>
+  <h2 id="drives-title">Work that matters, craft for its own sake.</h2>
+  <p>
+    I believe in open source and in doing things driven by love for the craft, not just a
+    paycheck. I have a deep need to use my skills for meaningful impact: to build things that
+    genuinely help people and make a positive difference in the world. Code for code's sake isn't
+    enough; I want the work I do to matter.
+  </p>
+  <p>
+    I'm very ambitious. These things are my passion and I pursue them regardless of job, payroll,
+    or mood. I want to get involved in something real: code with people I can learn from, and
+    together create something significantly great.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="craft-title">
+  <p class="section-kicker">craft</p>
+  <h2 id="craft-title">Elixir first, Rails a close second.</h2>
+  <p>
+    Elixir is my favourite language. I love how it mixes the simplicity of Ruby with the beauty of
+    the functional paradigm, and how it makes building concurrent, fault-tolerant systems feel
+    natural. Ruby is a close second; it shaped my professional career and I still feel at home in
+    the Rails ecosystem.
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="work-title">
+  <p class="section-kicker">work</p>
+  <h2 id="work-title">What I've built.</h2>
+  <ul class="signal-list">
+    <li><strong>Really Trusted</strong> (remote, 3.5+ years): Elixir/Phoenix/LiveView. Built an internal queue framework on database transactions and PubSub, Oban-backed ingestion, OAuth2, Moodle LMS integration.</li>
+    <li><strong>IFAD / United Nations</strong> (Rome): Rails consultant on an automated translation reporting engine for global operations.</li>
+    <li><strong>Packhelp, Xing, Chimera Prime</strong>: Rails/Spree, React, API work, leading a developer squad.</li>
+    <li><strong>DeerStorage</strong>: open-source data storage app I conceived, built, and led. Zero-refresh WebSocket UI, A+ rating from SSL Labs.</li>
+  </ul>
+  <p>Full history on <a href="/hire-me/">the hire-me page</a>; the toolset on <a href="/skillset/">skillset</a>.</p>
+</section>
+
+<section class="panel" aria-labelledby="now-title">
+  <p class="section-kicker">now</p>
+  <h2 id="now-title">AI specialization, from the road.</h2>
+  <p>
+    In June 2025, after a successful 3.5+ year tenure, I voluntarily left my role to fully
+    commit to exploring, implementing, and researching AI: LLM integration, generative media
+    pipelines, vector search strategies, RAG, and neural network foundations. Hands-on, mostly
+    in Python.
+  </p>
+  <p>
+    Since November 2025 I've been travelling. Six months through Asia (Thailand, Malaysia,
+    Indonesia, Bali, Vietnam, the Philippines, Japan) reshaped my perspective on life, people,
+    and what matters. Right now I'm in Greece, but that changes fast.
+    <strong>I'm still travelling, and open to remote work or relocation.</strong>
+  </p>
+</section>
+
+<section class="panel" aria-labelledby="about-title">
+  <p class="section-kicker">about me</p>
+  <h2 id="about-title">Social, confident, and always learning.</h2>
+  <p>
+    I'm a very social and confident person. I love to sing, and I played some guitar a while back.
+    And if there's a technology I don't know yet, I'll learn it before I start working with you.
+    This is IT after all. It's all about learning and the power of the mind.
+  </p>
+</section>
+
+<section class="panel contact-panel" id="contact" aria-labelledby="contact-title">
+  <p class="section-kicker">contact</p>
+  <h2 id="contact-title">Let's build something real.</h2>
+  <p>
+    Best first message: context, current stack, what hurts, and what a successful engagement would change.
+  </p>
+  <div class="contact-list">
+    <a href="https://www.linkedin.com/in/bartosz-g-7b2645143/">LinkedIn</a>
+    <a href="https://github.com/intpl" rel="me">github.com/intpl</a>
+  </div>
+</section>
 {% endblock content %}
