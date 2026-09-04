@@ -77,6 +77,6 @@ digital graphic design.
 
 ## Public work
 
-- [DeerStorage](https://github.com/intpl/deer_storage), open-source data storage application I conceived and led: zero-refresh WebSocket UI, multi-user partitioning, Nginx + Let's Encrypt setup graded A+ by SSL Labs. [Case study](https://gladecki.pl/2021/05/16/deerstorage/) and [live demo](https://demo.deerstorage.com/).
+- [DeerStorage](https://github.com/intpl/deer_storage), open-source data storage application I conceived and led: zero-refresh WebSocket UI, multi-user partitioning, Nginx + Let's Encrypt setup graded A+ by SSL Labs. [Case study](https://gladecki.pl/technical/deerstorage/) and [live demo](https://demo.deerstorage.com/).
 - [1op.eu source](https://github.com/intpl/1op-elixir-vuejs), WebSocket-based encrypted chat application using Elixir and Vue.
 - [compare_time](https://rubygems.org/gems/compare_time), Ruby gem for debugging time-related problems.
