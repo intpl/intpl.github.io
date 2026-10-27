@@ -163,10 +163,22 @@ a {
   white-space: nowrap;
 }
 
-.brand svg {
-  width: 24px;
-  height: 24px;
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
   flex: none;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  background:
+    linear-gradient(var(--color-void), var(--color-void)) padding-box,
+    linear-gradient(135deg, var(--color-electric-iris), var(--color-deep-verdant)) border-box;
+  color: var(--color-bone-white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 .site-header nav {
