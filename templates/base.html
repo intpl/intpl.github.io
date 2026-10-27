@@ -7,25 +7,37 @@
     <meta name="description" content="Bartosz Gładecki, senior full stack developer (Elixir/Phoenix, Ruby on Rails, React) with an active AI/ML specialization: LLM integration, RAG, vector and graph search, generative pipelines.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="/gruvbox.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap">
+    <link rel="stylesheet" href="/site.css">
   </head>
   <body>
     <a class="skip-link" href="#content">skip to content</a>
     <div class="site-shell">
       <header class="site-header">
+        <a class="brand{% if current_path is defined and current_path == "/" %} is-active{% endif %}" href="/" aria-label="Bartosz Gładecki home"{% if current_path is defined and current_path == "/" %} aria-current="page"{% endif %}>
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="brand-gradient" x1="2" y1="2" x2="22" y2="20" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#8052ff"></stop>
+                <stop offset="1" stop-color="#15846e"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M12 2 22 20H2Z" fill="none" stroke="url(#brand-gradient)" stroke-width="2"></path>
+          </svg>
+          <span>gladecki.pl</span>
+        </a>
         <nav aria-label="Primary">
-          <a href="/">home</a>
-          <a href="/skillset/">skillset</a>
-          <a href="/hire-me/">hire me!</a>
-          <a href="/technical/">technical notes</a>
-          <a href="/personal/">personal notes</a>
-          <a href="/contact/">contact</a>
+          <a href="/skillset/"{% if current_path is defined and current_path == "/skillset/" %} class="is-active" aria-current="page"{% endif %}>skillset</a>
+          <a href="/technical/"{% if current_path is defined and current_path is starting_with(pat="/technical/") %} class="is-active" aria-current="page"{% endif %}>technical notes</a>
+          <a href="/personal/"{% if current_path is defined and current_path is starting_with(pat="/personal/") %} class="is-active" aria-current="page"{% endif %}>personal notes</a>
+          <a href="/contact/"{% if current_path is defined and current_path == "/contact/" %} class="is-active" aria-current="page"{% endif %}>contact</a>
         </nav>
+        <a class="button--primary header-cta{% if current_path is defined and current_path == "/hire-me/" %} is-active{% endif %}" href="/hire-me/"{% if current_path is defined and current_path == "/hire-me/" %} aria-current="page"{% endif %}>hire me!</a>
       </header>
       <main id="content">
         {% block content %}{% endblock content %}
       </main>
     </div>
+    {% block scripts %}{% endblock scripts %}
   </body>
 </html>

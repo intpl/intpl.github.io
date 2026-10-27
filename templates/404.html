@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}404 - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="page-header error-page" aria-labelledby="error-title">
+  <p class="section-kicker">404</p>
+  <h1 id="error-title">Lost in the void.</h1>
+  <p class="lede">The page you are looking for does not exist.</p>
+  <a class="text-link" href="/">Return home</a>
+</section>
+{% endblock content %}
