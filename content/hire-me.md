@@ -1,16 +1,41 @@
 +++
-title = "Hire me!"
+title = "Work with me"
 template = "page.html"
 +++
 
-I'm currently travelling. Greece right now, but this changes fast. Open to **remote work or relocation**.
+I'm travelling. Greece right now, but this changes fast. Open to **remote work or relocation**.
+
+## What you can buy
+
+**Build the system** · 3–6 months, monthly.
+Elixir/Phoenix backend, concurrent pipelines that hold their shape under load, database-backed
+job queues, LiveView UI, tests you can trust. You talk to the person who writes the code.
+
+**Harden what exists** · 2 weeks.
+Queues, workers, transactions, locks, observability: the parts that break at 3am.
+
+**Put AI where it earns its place** · 2–4 weeks, fixed scope, fixed price.
+You have a prototype, a half-built RAG pipeline, or a chatbot that answers wrong. I audit retrieval
+and ingestion, build the evaluation harness you're missing, and leave you with a pipeline you can
+measure and ship.
+
+I don't take frontend-only tickets, on-site-only roles, or spec work before a contract.
+
+## How it starts
+
+1. You write three lines: what you're building, where it hurts, what has to change.
+2. A 30-minute call. I tell you whether I'm the right person, and say no if I'm not.
+3. A written scope: what changes, in what order, by when, for how much.
+4. I start. Progress arrives as commits.
 
 ## When we should talk
 
-- You need a senior full stack developer who owns backend, frontend, and deployment.
-- Your Elixir/Phoenix or Rails product needs better structure, reliability, or speed.
-- You're building something with LLMs, RAG, or generative pipelines and want it done properly.
-- You want someone who learns the unknown stack before day one. That's the job.
+- You need a senior engineer who owns the backend all the way to deployment.
+- Your Elixir/Phoenix product has to stay fast and correct as load grows.
+- Queues, workers or transactions lose work, and you want that fixed for good.
+- You're adding LLMs or RAG and want it built on a system that holds.
+
+## Where I've worked
 
 ### Really Trusted (Elixir/Phoenix/LiveView developer, remote, Vancouver) · 2021–2025
 
@@ -50,9 +75,8 @@ production project.
 
 ### Bluebox AS (Rails full stack developer, remote, Norway) · 2016
 
-Built and managed the secure backend API for a physical medical device helping patients
-with diabetes (Rails 5, PostgreSQL, React/Redux). Contract ran until the project ended when
-further venture funding could not be secured.
+Secure backend API for a physical medical device helping patients with diabetes (Rails 5,
+PostgreSQL, React/Redux). The venture closed after failing to raise its next round.
 
 ### Kontomierz (Rails full stack developer, Warsaw) · 2016
 
@@ -62,8 +86,8 @@ wallet: refactored core exception handlers and rewrote the test suite for the fu
 ### CodeQuest (junior Rails full stack developer, Warsaw) · 2015–2016
 
 Core engineering on LiftHero, an Uber-style ride-sharing platform for senior citizens. Owned
-payment workflows: integrated the entire platform with Stripe. Ended when the startup
-scaled down after not securing investment.
+payment workflows: integrated the entire platform with Stripe. The startup scaled down before
+its next round.
 
 ### Ecom Media (web developer and Linux server administrator, Warsaw) · 2014
 

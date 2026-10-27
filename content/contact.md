@@ -3,11 +3,15 @@ title = "Contact"
 template = "page.html"
 +++
 
-Tell me what needs to exist, change, or stop breaking.
+Send me your problem. Three lines are enough:
 
-Best first message: context, current stack, what hurts, and what a successful engagement would change.
+1. What you're building.
+2. Where it hurts.
+3. What has to change for the engagement to be worth it.
 
-- [bgladecki@proton.me](mailto:bgladecki@proton.me)
+I read and answer every message myself.
+
+- [bgladecki@proton.me](mailto:bgladecki@proton.me?subject=Project%20inquiry)
 - [LinkedIn](https://www.linkedin.com/in/bartosz-g-7b2645143/)
 - [github.com/intpl](https://github.com/intpl)
 

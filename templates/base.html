@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <meta name="description" content="Bartosz Gładecki, senior full stack developer (Elixir/Phoenix, Ruby on Rails, React) with an active AI/ML specialization: LLM integration, RAG, vector and graph search, generative pipelines.">
+    <meta name="description" content="Bartosz Gładecki: senior software engineer building reliable, concurrent Elixir/Phoenix systems. Twelve years professionally, on Rails and the BEAM, with AI used where it earns its place.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
@@ -32,7 +32,7 @@
           <a href="/personal/"{% if current_path is defined and current_path | truncate(length=10, end="") == "/personal/" %} class="is-active" aria-current="page"{% endif %}>personal notes</a>
           <a href="/contact/"{% if current_path is defined and current_path == "/contact/" %} class="is-active" aria-current="page"{% endif %}>contact</a>
         </nav>
-        <a class="button--primary header-cta{% if current_path is defined and current_path == "/hire-me/" %} is-active{% endif %}" href="/hire-me/"{% if current_path is defined and current_path == "/hire-me/" %} aria-current="page"{% endif %}>hire me!</a>
+        <a class="button--primary header-cta{% if current_path is defined and current_path == "/hire-me/" %} is-active{% endif %}" href="/hire-me/"{% if current_path is defined and current_path == "/hire-me/" %} aria-current="page"{% endif %}>work with me</a>
       </header>
       <main id="content">
         {% block content %}{% endblock content %}
