@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  const TAU = Math.PI * 2;
+  const COLORS = ["#ff2200", "#ffb829", "#15846e", "#ff4fa3", "#4d8dff", "#b36bff"];
+
+  drawSectionLines();
+
   const canvas = document.getElementById("hero-constellation");
   if (!canvas) {
     return;
@@ -11,9 +16,7 @@
     return;
   }
 
-  const TAU = Math.PI * 2;
   const SEED = 0x5eed;
-  const COLORS = ["#ff2200", "#ffb829", "#15846e", "#ff4fa3", "#4d8dff", "#b36bff"];
   const BRAIN_PARTS = [
     [-0.28, -0.24, 0.38, 0.45],
     [0.28, -0.24, 0.38, 0.45],
@@ -238,4 +241,71 @@
   }
 
   resize();
+
+  function drawSectionLines() {
+    const canvases = document.querySelectorAll(".section-lines");
+
+    for (const lineCanvas of canvases) {
+      const lineCtx = lineCanvas.getContext("2d");
+      if (!lineCtx) {
+        continue;
+      }
+
+      const seed = Number(lineCanvas.dataset.seed) || 1;
+
+      function render() {
+        const rect = lineCanvas.getBoundingClientRect();
+        if (!rect.width || !rect.height) {
+          return;
+        }
+
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        const width = rect.width;
+        const height = rect.height;
+        lineCanvas.width = Math.round(width * ratio);
+        lineCanvas.height = Math.round(height * ratio);
+        lineCtx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        lineCtx.clearRect(0, 0, width, height);
+        lineCtx.lineWidth = 1;
+
+        const random = mulberry32(seed * 0x9e3779b1);
+        const count = Math.max(18, Math.round(height / 4));
+
+        for (let index = 0; index < count; index += 1) {
+          const baseY = ((index + 0.5) / count) * height;
+          const phase = randomBetween(random, 0, TAU);
+          const frequency = randomBetween(random, 0.6, 2.4);
+          const amplitude = (height / count) * randomBetween(random, 0.2, 3.2);
+          const tilt = randomBetween(random, -0.08, 0.08) * height;
+
+          lineCtx.globalAlpha = randomBetween(random, 0.25, 0.7);
+          lineCtx.strokeStyle = COLORS[Math.floor(random() * COLORS.length)];
+          lineCtx.setLineDash(
+            random() < 0.35 ? [randomBetween(random, 4, 26), randomBetween(random, 3, 18)] : []
+          );
+
+          lineCtx.beginPath();
+          for (let x = 0; x <= width; x += 2) {
+            const y =
+              baseY +
+              (tilt * x) / width +
+              amplitude * Math.sin((x / width) * TAU * frequency + phase) +
+              0.35 * amplitude * Math.sin((x / width) * TAU * frequency * 2.7 + phase * 1.7);
+            if (x === 0) {
+              lineCtx.moveTo(x, y);
+            } else {
+              lineCtx.lineTo(x, y);
+            }
+          }
+          lineCtx.stroke();
+        }
+
+        lineCtx.setLineDash([]);
+        lineCtx.globalAlpha = 1;
+      }
+
+      new ResizeObserver(render).observe(lineCanvas);
+      render();
+    }
+  }
 })();

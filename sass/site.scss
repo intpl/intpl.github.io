@@ -341,9 +341,16 @@ a {
   line-height: 1.05;
 }
 
-.split-section--reverse h2 {
+.split-section--reverse .section-head {
   grid-column: 2;
   grid-row: 1;
+}
+
+.section-lines {
+  width: 100%;
+  height: clamp(140px, 16vw, 200px);
+  margin-top: var(--space-32);
+  background: transparent;
 }
 
 .split-section--reverse .section-copy {
@@ -426,7 +433,7 @@ a {
     margin-bottom: var(--space-96);
   }
 
-  .split-section--reverse h2,
+  .split-section--reverse .section-head,
   .split-section--reverse .section-copy {
     grid-column: auto;
     grid-row: auto;
