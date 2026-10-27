@@ -1,6 +1,7 @@
 +++
 title = "Work with me"
 template = "page.html"
+aliases = ["/hire-me/", "/cv/"]
 +++
 
 I'm travelling. Greece right now, but this changes fast. Open to **remote work or relocation**.
