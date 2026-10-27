@@ -341,14 +341,22 @@ a {
   line-height: 1.05;
 }
 
+.section-head {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 0;
+}
+
 .split-section--reverse .section-head {
   grid-column: 2;
   grid-row: 1;
 }
 
 .section-lines {
+  flex: 1 1 0;
   width: 100%;
-  height: clamp(140px, 16vw, 200px);
+  min-height: 140px;
   margin-top: var(--space-32);
   background: transparent;
 }
@@ -437,6 +445,16 @@ a {
   .split-section--reverse .section-copy {
     grid-column: auto;
     grid-row: auto;
+  }
+
+  .section-head {
+    align-self: auto;
+  }
+
+  .section-lines {
+    flex: none;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
   }
 }
 
