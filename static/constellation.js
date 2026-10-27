@@ -13,7 +13,7 @@
 
   const TAU = Math.PI * 2;
   const SEED = 0x5eed;
-  const COLORS = ["#8052ff", "#ffb829", "#15846e", "#ff4fa3", "#4d8dff", "#b36bff"];
+  const COLORS = ["#ff2200", "#ffb829", "#15846e", "#ff4fa3", "#4d8dff", "#b36bff"];
   const BRAIN_PARTS = [
     [-0.28, -0.24, 0.38, 0.45],
     [0.28, -0.24, 0.38, 0.45],
