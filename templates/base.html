@@ -28,8 +28,8 @@
         </a>
         <nav aria-label="Primary">
           <a href="/skillset/"{% if current_path is defined and current_path == "/skillset/" %} class="is-active" aria-current="page"{% endif %}>skillset</a>
-          <a href="/technical/"{% if current_path is defined and current_path is starting_with(pat="/technical/") %} class="is-active" aria-current="page"{% endif %}>technical notes</a>
-          <a href="/personal/"{% if current_path is defined and current_path is starting_with(pat="/personal/") %} class="is-active" aria-current="page"{% endif %}>personal notes</a>
+          <a href="/technical/"{% if current_path is defined and current_path | truncate(length=11, end="") == "/technical/" %} class="is-active" aria-current="page"{% endif %}>technical notes</a>
+          <a href="/personal/"{% if current_path is defined and current_path | truncate(length=10, end="") == "/personal/" %} class="is-active" aria-current="page"{% endif %}>personal notes</a>
           <a href="/contact/"{% if current_path is defined and current_path == "/contact/" %} class="is-active" aria-current="page"{% endif %}>contact</a>
         </nav>
         <a class="button--primary header-cta{% if current_path is defined and current_path == "/hire-me/" %} is-active{% endif %}" href="/hire-me/"{% if current_path is defined and current_path == "/hire-me/" %} aria-current="page"{% endif %}>hire me!</a>
