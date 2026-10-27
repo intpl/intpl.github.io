@@ -1,5 +1,5 @@
 ---
-title: "(outdated) Stateful GenServers in Elixir"
+title: "Stateful GenServers in Elixir"
 date: 2017-08-19
 description: Fascinated by Elixir's concurrency model, I've decided to play around with the idea of having multiple processes stored in a constantly changing list, but at the same time having a common state.
 ---

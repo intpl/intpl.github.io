@@ -1,5 +1,5 @@
 ---
-title: "(outdated) Cyclic Enumerator in Ruby (dirty trick)"
+title: "Cyclic Enumerator in Ruby (dirty trick)"
 date: 2017-04-27
 description: Just a short blogpost about how to make a cyclic enumerator in Ruby.
 ---

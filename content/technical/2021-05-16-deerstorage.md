@@ -1,5 +1,5 @@
 ---
-title: "(outdated) DeerStorage - a very fast self-hosted database with shareable rows/files"
+title: "DeerStorage - a very fast self-hosted database with shareable rows/files"
 date: 2021-05-16
 description: Using Docker, docker-compose, Elixir, Phoenix Framework, Phoenix Liveview, Ecto Embedded Schemes and Let's Encrypt I created a fully self-hosted open source web application to be used by people and organizations needing a database/files storage with sharing capabilities
 ---

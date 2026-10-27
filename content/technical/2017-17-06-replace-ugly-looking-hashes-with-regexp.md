@@ -1,5 +1,5 @@
 ---
-title: "(outdated) Replace ugly looking symbol hashes with Regexp"
+title: "Replace ugly looking symbol hashes with Regexp"
 date: 2017-06-17
 description: Simple oneliner to replace all old 1.8-looking hashes (:a => :b) with new notation.
 ---
