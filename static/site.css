@@ -188,8 +188,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  text-underline-offset: 0.18em;
-  text-decoration-thickness: max(1px, 0.06em);
+  text-decoration-skip-ink: none;
 }
 
 :focus-visible {
@@ -271,8 +270,6 @@ a {
 .site-nav a[aria-current="page"] {
   text-decoration: underline;
   text-decoration-color: var(--color-accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
 }
 
 .button {
@@ -335,7 +332,6 @@ a {
   font-weight: 500;
   text-decoration: underline;
   text-decoration-color: var(--color-rule-2);
-  text-decoration-thickness: 1px;
   transition:
     color var(--dur-short) var(--ease-out),
     text-decoration-color var(--dur-short) var(--ease-out);
@@ -723,7 +719,6 @@ a {
   font-weight: 500;
   text-decoration: underline;
   text-decoration-color: var(--color-accent);
-  text-decoration-thickness: 1px;
 }
 
 .contact-mail a:hover {
