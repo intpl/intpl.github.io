@@ -25,7 +25,7 @@ library only speaks those.
 
 ## Ruby on Rails
 
-Rails 4–6, Spree and Solidus e-commerce, the Rails i18n localization engine, RSpec,
+Rails 4 to 6, Spree and Solidus e-commerce, the Rails i18n localization engine, RSpec,
 Capybara (Selenium).
 
 ## Frontend

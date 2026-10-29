@@ -1,0 +1,33 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "site",
+  "shape": "Dossier",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/cool",
+  "hero": "Stage (/) · Banner (documents)",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "none, the generative canvas art is the visual",
+  "photos": [],
+  "entry": "personal site rebuilt as a hire dossier: name and role, work index, services, talks, background, contact; the five generated line fields and the constellation kept, recoloured to cool ink",
+  "fingerprint": "Hanging|Rows|Hairline|Outlined|Full-bleed art|None",
+  "sections": [
+   "Stage hero: name, role, actions, constellation",
+   "Work index rows + flow band",
+   "Offer rows, rings portrait",
+   "Talks: rays band, head split, title rows",
+   "About split: prose, rain strip",
+   "Contact band: statement, steps, email; mesh band",
+   "Footer mast"
+  ],
+  "signature": "the constellation: triangles traced into a brain silhouette, drawn live in cool ink",
+  "waived": [
+   "79",
+   "49b"
+  ],
+  "prompt": "redesign of gladecki.pl: keep the abstract canvas shapes, fix their growth over time, focus on typography and clarity",
+  "date": "2026-10-29"
+ }
+]

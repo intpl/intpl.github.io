@@ -7,28 +7,48 @@
     <meta name="description" content="Bartosz Gładecki: senior software engineer building reliable, concurrent Elixir/Phoenix systems. Twelve years professionally, on Rails and the BEAM, with AI used where it earns its place.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="preload" href="https://fonts.gstatic.com/s/monasans/v4/o-0IIpQmx24alC5A4PNr5TRA.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/monasans/v4/o-0IIpQmx24alC5A4PNr6zRAW_0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,200..900&display=swap">
     <link rel="stylesheet" href="/site.css">
   </head>
   <body>
-    <a class="skip-link" href="#content">skip to content</a>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand{% if current_path is defined and current_path == "/" %} is-active{% endif %}" href="/" aria-label="Bartosz Gładecki home"{% if current_path is defined and current_path == "/" %} aria-current="page"{% endif %}>
-          <span class="brand-mark">gladecki.pl</span>
-        </a>
-        <nav aria-label="Primary">
-          <a href="/skillset/"{% if current_path is defined and current_path == "/skillset/" %} class="is-active" aria-current="page"{% endif %}>skillset</a>
-          <a href="/technical/"{% if current_path is defined and current_path | truncate(length=11, end="") == "/technical/" %} class="is-active" aria-current="page"{% endif %}>technical notes</a>
-          <a href="/personal/"{% if current_path is defined and current_path | truncate(length=10, end="") == "/personal/" %} class="is-active" aria-current="page"{% endif %}>personal notes</a>
-          <a href="/contact/"{% if current_path is defined and current_path == "/contact/" %} class="is-active" aria-current="page"{% endif %}>contact</a>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/" aria-label="Bartosz Gładecki, home">gladecki.pl</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/skillset/"{% if current_path is defined and current_path == "/skillset/" %} aria-current="page"{% endif %}>Skillset</a>
+          <a href="/technical/"{% if current_path is defined and current_path | truncate(length=11, end="") == "/technical/" %} aria-current="page"{% endif %}>Technical notes</a>
+          <a href="/personal/"{% if current_path is defined and current_path | truncate(length=10, end="") == "/personal/" %} aria-current="page"{% endif %}>Personal notes</a>
+          <a href="/contact/"{% if current_path is defined and current_path == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
         </nav>
-        <a class="button--primary header-cta{% if current_path is defined and current_path == "/work-with-me/" %} is-active{% endif %}" href="/work-with-me/"{% if current_path is defined and current_path == "/work-with-me/" %} aria-current="page"{% endif %}>work with me</a>
-      </header>
-      <main id="content">
-        {% block content %}{% endblock content %}
-      </main>
-    </div>
+        <a class="button button--quiet header-cta" href="/work-with-me/"{% if current_path is defined and current_path == "/work-with-me/" %} aria-current="page"{% endif %}>Work with me</a>
+      </div>
+    </header>
+    <main id="content">
+      {% block content %}{% endblock content %}
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-mark">gladecki.pl</p>
+        <div class="footer__grid">
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="/skillset/">Skillset</a>
+            <a href="/technical/">Technical notes</a>
+            <a href="/personal/">Personal notes</a>
+            <a href="/contact/">Contact</a>
+            <a href="/work-with-me/">Work with me</a>
+          </nav>
+          <div class="footer-contact">
+            <a href="mailto:bgladecki@proton.me">bgladecki@proton.me</a>
+            <a href="https://www.linkedin.com/in/bartosz-g-7b2645143/">LinkedIn</a>
+            <a href="https://github.com/intpl" rel="me">github.com/intpl</a>
+          </div>
+        </div>
+        <p class="footer__note">Travelling, currently in Greece.</p>
+      </div>
+    </footer>
     {% block scripts %}{% endblock scripts %}
   </body>
 </html>

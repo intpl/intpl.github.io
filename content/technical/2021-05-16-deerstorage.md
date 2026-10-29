@@ -15,7 +15,7 @@ In this blog post I will use the term "database". It does not, by any means, ref
 Follow installation instructions on the [GitHub page](https://github.com/intpl/deer_storage)
 
 # A problem with uploading files to the Internet when you are a professional
-## --- Where to store your files? How to share them with clients?
+## Where to store your files? How to share them with clients?
 Vast majority of people, when they want to share files with others on a regular basis, use solutions like Google Drive and similar. While it is fine for files requiring just one-time-sharing-and-forgetting, it brings out problems later on, when you have a lot more files and you want to keep track of them. You also need some sort of a naming convention for quick look-up, which may be counter-intuitive to keep track of.
 For example, if you are a veterinary clinic and you want to share visit summaries and recommendations to your clients, you probably use either expensive commercial software, or you try to categorize files online somehow. If you are based in a poorer country, where currency exchange rates are unfavorable, then that software may cost you half of your income. In that case you have to use cloud-based solution from software giants like Google or Microsoft, which condemns you to categorize your files manually, having to remember where you put your files and how you are doing so. This requires you to think that through and stick to it over time. Which is, without any doubt, a problem for non-technical users. Fast lookup is nearly impossible, as you have to click through directories and remember which file is responsible for what you are looking for. You probably end up with having dozens of directories with pet names, inside of which you have multiple files named like "visit-2021-04-12.odt". After some time, you start to organize your online directories, because you have multiple pets with the same name, and spend a long time renaming directories to also include owner name. Owners have their spouses, which also can contact you, so your directory name is getting longer and longer. Now all you see is dots instead of owners list. Each time they call you, you spend endless time looking up which dog they are even talking about. Not to mention that Google Drive (at the time of writing) does not display directories of found files in the list, so you click through multiple files before you find a correct one. 
 
@@ -27,18 +27,18 @@ You end up using "the cloud". You didn't have a choice, right?
 
 ...right?
 # An open-source solution
-## --- Let's redefine a term "relational database" to broad audiences
+## Let's redefine a term "relational database" to broad audiences
 Believe me or not, this problem was solved [decades ago](https://en.wikipedia.org/wiki/Relational_database#History). It was just never introduced to the regular user. IT professionals know exactly how to use this paradigm in underlying databases of their software. It's nearly impossible to create a web application without a relational database. After all, everything depends on each other, so let's allow users to set up their dependencies for their data online.
 
 ![alt text](/deer/editing_tables.png "Editing tables...")
 
-## --- Fast lookup over your data, grouping files?
+## Fast lookup over your data, grouping files?
 Having a user determine exactly what depends on what allow them to structure their data and create "buckets" of files and never be lost in it again. They can quickly search for either "buckets", or files. System does not read what's inside a file, so only users have the power to determine how search results work. If they want to see for example all invoices for a client, they look up the client and see all connected records. Invoices may include pet name or the pet is stored in a separate table. No matter how the file is named, it will be listed under found pet.
 
 ![alt text](/deer/lookup-a-dog.png "Finding pet...")
 
-## --- Preview of files, sharing them
-Assuming you created your database tables with a consist structure (or someone IT-wise helped you do so), you probably have a table named "clients" alongside with "pets" and for example "visit documents". When someone is calling you and requesting an appointment, you create a client ("John Doe"), then their pet ("Buddy"). That's it. It took you less than a minute. After a visit you look up the client (fuzzy search, so you start typing "Jo" and immediately see the result). You click "Create connected record", select "Visit documents". You upload visit summary to the "bucket" (let's call it "record" from now on) and click "share". You send them a link to it via e-mail and everything is in track.
+## Preview of files, sharing them
+Assuming you created your database tables with a consist structure (or someone IT-wise helped you do so), you probably have a table named "clients" alongside with "pets" and for example "visit documents". When someone is calling you and requesting an appointment, you create a client, then their pet. That's it. It took you less than a minute. After a visit you look up the client (fuzzy search, so you start typing "Jo" and immediately see the result). You click "Create connected record", select "Visit documents". You upload visit summary to the "bucket" (let's call it "record" from now on) and click "share". You send them a link to it via e-mail and everything is in track.
 
 There is a caveat to this. You need to remember to also connect the dog to this visit. Without connecting, you will not be able to find a record through this relation.
 
@@ -51,7 +51,7 @@ If a opendocument link is clicked, they will see a preview of the file allowing 
 
 ![alt text](/deer/opendocument-format-preview.png "Preview in shared record...")
 
-## --- Allowing others to send you files, connecting them to your database
+## Allowing others to send you files, connecting them to your database
 What if you request your client to take their dog for an X-Ray image and you want them to send it to you later on? One way would be to ask them to send it to you via e-mail, but let's keep things in one place. After all, you want to keep your data in one place and you really don't want to look up the image later on in your mailbox. You can share your animal database record with them by clicking "Share for editing" or you can create a table named for example "Files from clients". Then, you can click "Create connected record" from within viewing "Buddy" record.
 
 ![alt text](/deer/creating-connected-record.png "Creating connected record...")
@@ -74,7 +74,7 @@ After they upload the image, you will see it from your dog record:
 
 Although it brings security concerns and probably should be limited to file count and size on link generation (which is not at the moment of writing this post - the limit is unified with database/subscription limits), it is very handy for users to just send a link and forget about the case. When the time comes, you will have your data inside the database.
 
-## --- Importing a table from a .csv file
+## Importing a table from a .csv file
 
 I wrote a simple importer for `.csv` files. It's not the most efficient one and for sure it needs comprehensive rewrite (I'd love to use [Elixir Flow](https://hexdocs.pm/flow/Flow.html) for that), but as for now, it does the job rather well for less that 20-30k rows.
 
@@ -96,7 +96,7 @@ You can upload files for each, share them if you want, compare them, etc.
 
 ![alt text](/deer/comparing-records.png "Comparing records...")
 
-## --- You don't have to reload anything! It's 2021!
+## You don't have to reload anything! It's 2021!
 
 Leveraging [Elixir/Erlang's amazing concurrency model](https://erlang.org/doc/getting_started/conc_prog.html) and equally amazing work of folks from [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html), there is no need to ever reload a page in DeerStorage. When you create, update, upload files to records or change database tables, it sends a WebSocket event with new data to all connected browser sessions. You can be sure you always see the latest data without needing to reload a page. While we are on a veterinary clinic example, this is extremely handy if you have for example a receptionist with opened client record and a doctor inside the office next door. The doctor can set up a visit recommendations and the receptionist sees it right away.
 
@@ -106,9 +106,9 @@ Sometimes it happens that two people may want to save different changes to the s
 
 Similarly when you upload files in multiple browsers, each file upload is enclosed inside a PostgreSQL transaction, so there is no need to worry about loosing your files or leaving orphaned ones on your server.
 
-## --- User management and databases administration
+## User management and databases administration
 
-### --- Admin panel for managing users and databases
+### Admin panel for managing users and databases
 
 In DeerStorage, user can have access to many databases, and databases can be modified by multiple users that have access. Users with according permissions can invite others by entering their e-mail addresses to an invitation page. But that's not all. Certain users may have administrator capabilities. Having that, one can manage user accounts and databases. Admins can also manage database-to-user connections easily, so creating a database and connecting it is easy and handy.
 
@@ -118,19 +118,19 @@ Similarly you can see all users connected to a database:
 
 ![alt text](/deer/admin-panel-list-subscription-users.png "Viewing a database in admin panel...")
 
-### --- Regular users inviting others.
+### Regular users inviting others.
 
 As a regular user of a database you don't have to be dependent on an administrator to invite others to collaborate. If you have permissions granted, there is a handy invitation controller that allow you to manage users. Clicking a permission button toggles it:
 
 ![alt text](/deer/managing-users-as-regular-user.png "Managing users as regular user...")
 
-### --- Setting limits for specific databases.
+### Setting limits for specific databases.
 
 When generating a `.env`, you will be asked to provide default settings for newly created databases (if you wishes to change that later - you need to recompile the phoenix app by running `docker-compose build`). From now on, every new database will be created with those defaults. If you wishes to change it per-database, you can using admin panel.
 
 ![alt text](/deer/changing-database-limits.png "Editing database limits...")
 
-## --- Database templates
+## Database templates
 
 Just as a proof of concept I created some example templates to be used as a starting point of your database. I didn't do any market research for what is needed and those are just examples of how you can use DeerStorage. As you can see, there is something as ridiculous as Family database template having "Agreements with kids". There is a [file in the code](https://github.com/intpl/deer_storage/blob/master/lib/deer_storage/deer_tables_examples.ex) that has all examples in it. Please don't hesitate to send pull requests with some real-world examples.
 
