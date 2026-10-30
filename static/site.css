@@ -1,6 +1,6 @@
-/* Hallmark · shape: Dossier · genre: atmospheric · theme: Midnight (deal 2/3, seed personal-senior-elixir-engineer-ec40·735fedf1·2026-10-29·r0) · redesign: full · draw: f5436c
- * hero: Banner, Stage (/) · nav: edge-aligned · footer: mast · imagery: none, the canvas art is the visual · signature: the constellation drawn live in cool ink
- * axes: dark/grotesk-sans/cool · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · shape: Dossier · genre: atmospheric · theme: Signal (deal 2/3, seed personal-senior-elixir-engineer-ec40·735fedf1·2026-10-29·r0) · redesign: full · draw: f5436c
+ * hero: Banner, Stage (/) · nav: edge-aligned · footer: mast · imagery: none, the canvas art is the visual · signature: the constellation drawn live in red and orange ink
+ * axes: dark/grotesk-sans/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S5 R4 V4 · weakest: V, the drawn page ran five canvases and a split; work now leads and the canvas placements differ by section */
 /* Hallmark · waive 79 · the article, index and contact routes are documents without a hero · 79 scores the landing fold, and these pages read past it */
 /* Hallmark · waive 49b · the archive titles are the articles' own long names at 320 · a post title is content, not a control */
@@ -53,29 +53,29 @@
   --section-gap-l: 176px;
   --nav-h: 72px;
 
-  --color-paper: oklch(14% 0.048 264);
-  --color-paper-2: oklch(18.5% 0.052 264);
-  --color-ink: oklch(95% 0.016 250);
-  --color-ink-2: oklch(88% 0.05 245);
-  --color-muted: oklch(73% 0.04 256);
-  --color-rule: oklch(29% 0.058 264);
-  --color-rule-2: oklch(40% 0.06 262);
-  --color-accent: oklch(80% 0.11 230);
-  --color-accent-2: oklch(58% 0.1 236);
-  --color-accent-ink: oklch(16% 0.05 264);
-  --color-focus: oklch(84% 0.12 228);
+  --color-paper: #000000;
+  --color-paper-2: #0e0e0e;
+  --color-ink: #ffffff;
+  --color-ink-2: #bdbdbd;
+  --color-muted: #9a9a9a;
+  --color-rule: #2a2a2a;
+  --color-rule-2: #454545;
+  --color-accent: #ff2200;
+  --color-accent-2: #ff7a29;
+  --color-accent-ink: #000000;
+  --color-focus: #ff7a29;
 
-  --color-code-keyword: oklch(80% 0.11 230);
-  --color-code-fn: oklch(88% 0.05 245);
-  --color-code-string: oklch(82% 0.08 190);
-  --color-code-num: oklch(86% 0.06 225);
-  --color-code-comment: oklch(64% 0.035 256);
+  --color-code-keyword: #ff2200;
+  --color-code-fn: #bdbdbd;
+  --color-code-string: #15846e;
+  --color-code-num: #ff7a29;
+  --color-code-comment: #9a9a9a;
 
-  --art-1: oklch(88% 0.05 245);
-  --art-2: oklch(80% 0.11 230);
-  --art-3: oklch(58% 0.1 236);
-  --art-4: oklch(60% 0.05 200);
-  --art-5: oklch(72% 0.04 256);
+  --art-1: #ff2200;
+  --art-2: #ffb829;
+  --art-3: #15846e;
+  --art-4: #ff4fa3;
+  --art-5: #4d8dff;
 
   --font-display: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-display);
